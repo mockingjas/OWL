@@ -1,0 +1,37 @@
+<html ng-app="owlApp">
+    <head>
+        <script src="//code.angularjs.org/1.5.5/angular.min.js"></script>
+        <title>OWL</title>
+        <meta charset="utf-8">
+        <script>
+            var owlApp = angular.module('owlApp', []);
+            owlApp.controller('myCtrl', function($scope,$http) {
+                $scope.bookName="";
+                
+                var booksUrl = '/books.json';
+                $http.get(booksUrl).success(function(data){
+                    $scope.books = data;                            
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div ng-controller="myCtrl">
+        <input type="text" ng-model="bookName" placeholder='search'>
+            <br>
+        book: {{bookName}}
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="book in books">
+                    <td>{{book.title}}</td>
+                    <td>{{book.genre}}</td>
+                    <td><a href="">borrow</a></td>
+                </tr>
+            </table>
+        </div>
+    </body>    
+</html>
