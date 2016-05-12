@@ -1,67 +1,39 @@
-<<<<<<< HEAD
 /*lib system main*/
 
-CREATE DATABASE owl_sys;
+/*CREATE DATABASE owl_sys;
 
-use owl_sys;
+use owl_sys;*/
+
+/*
+IN CMD: sqlite3 (http://www.tutorialspoint.com/sqlite/sqlite_installation.htm)
+Create database schema by executing: sqlite3 owl_sys.db main.sql
+Make sure to cdir to your intended location of db
+*/
 
 CREATE TABLE book(
-	bookId INT(5) AUTO_INCREMENT PRIMARY KEY,
-	title VARCHAR(100) NOT NULL,
-	isbn VARCHAR(100) NOT NULL,
-	genre VARCHAR(100) NOT NULL,
-	author VARCHAR(100) NOT NULL,
+	bookId INTEGER PRIMARY KEY AUTOINCREMENT,
+	title CHAR(100) NOT NULL,
+	isbn CHAR(100) NOT NULL,
+	genre CHAR(100) NOT NULL,
+	author CHAR(100) NOT NULL,
 	avail_flag BOOLEAN NOT NULL
 );
 
 CREATE TABLE user(
-	username VARCHAR(50) PRIMARY KEY,
+	username CHAR(50) PRIMARY KEY,
 	/*adding some details, in case we have the notification :)*/
-	name VARCHAR(50) NOT NULL,
+	name CHAR(50) NOT NULL,
 	isAdmin BOOLEAN NOT NULL
 );
 
 CREATE TABLE borrow(
-	borrowId INT AUTO_INCREMENT PRIMARY KEY,
+	borrowId INTEGER PRIMARY KEY AUTOINCREMENT ,
 	borrowDate DATE NOT NULL,
 	dueDate DATE NOT NULL,
 	returnDate DATE NOT NULL,
-	borrowReason VARCHAR(200),
-	bookId INT(5),
-	username VARCHAR(50),
+	borrowReason CHAR(200),
+    bookId INTEGER,
+    username VARCHAR(50),
 	FOREIGN KEY (bookId) REFERENCES book(bookId),
 	FOREIGN KEY (username) REFERENCES user(username)
 );
-
-=======
-/*lib system main*/
-
-CREATE DATABASE owl_sys;
-
-CREATE TABLE book(
-	bookId INT(5) AUTO_INCREMENT PRIMARY KEY,
-	title VARCHAR(100) NOT NULL,
-	isbn VARCHAR(100) NOT NULL,
-	genre VARCHAR(100) NOT NULL,
-	author VARCHAR(100) NOT NULL,
-	avail_flag BOOLEAN NOT NULL
-);
-
-CREATE TABLE user(
-	username VARCHAR(50) PRIMARY KEY,
-	/*adding some details, in case we have the notification :)*/
-	name VARCHAR(50) NOT NULL,
-	isAdmin BOOLEAN NOT NULL
-);
-
-CREATE TABLE borrow(
-	borrowId INT AUTO_INCREMENT PRIMARY KEY,
-	borrowDate DATE NOT NULL,
-	dueDate DATE NOT NULL,
-	returnDate DATE NOT NULL,
-	borrowReason VARCHAR(200),
-	bookId INT FOREIGN KEY REFERENCES books(bookId),
-	username VARCHAR(50) FOREIGN KEY REFERENCES user(username)
-);
-
->>>>>>> parent of 0aa31cd... Add Django init files
