@@ -1,6 +1,8 @@
 /*lib system main*/
 
-CREATE DATABASE owl_sys;
+/* CREATE DATABASE owl_sys; */
+
+use owl_sys;
 
 CREATE TABLE book(
 	bookId INT(5) AUTO_INCREMENT PRIMARY KEY,
@@ -24,7 +26,8 @@ CREATE TABLE borrow(
 	dueDate DATE NOT NULL,
 	returnDate DATE NOT NULL,
 	borrowReason VARCHAR(200),
-	bookId INT FOREIGN KEY REFERENCES books(bookId),
-	username VARCHAR(50) FOREIGN KEY REFERENCES user(username)
+	bookId INT(5),
+	username VARCHAR(50),
+	FOREIGN KEY (bookId) REFERENCES book(bookId),
+	FOREIGN KEY (username) REFERENCES user(username)
 );
-
