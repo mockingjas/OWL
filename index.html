@@ -8,30 +8,65 @@
             owlApp.controller('myCtrl', function($scope,$http) {
                 $scope.bookName="";
                 
+                //TODO get data from sql
                 var booksUrl = '/books.json';
                 $http.get(booksUrl).success(function(data){
                     $scope.books = data;                            
                 });
+                
+                var _sortBy = function (field) {
+                        $scope.sortField = field;
+                };
+                
+                var _reverseOrder = function () {
+                        $scope.isReversed = !$scope.isReversed;
+                };
+                
+                $scope.sortBy = _sortBy;
+                $scope.isReversed = "false";
+                $scope.reverseOrder = _reverseOrder; 
+                
+                $scope.test="search";
+        
+                $scope.borrowBook = function(ID){
+                    console.log(ID);
+                }
+                
+                $scope.returnBook = function(ID){
+                    console.log(ID);
+                }
+                
+                $scope.waitBook = function(ID){
+                    console.log(ID);
+                }
             });
+
         </script>
     </head>
     <body>
         <div ng-controller="myCtrl">
-        <input type="text" ng-model="bookName" placeholder='search'>
+        <input type="text" ng-model="searchFilter" placeholder='search'>
             <br>
-        book: {{bookName}}
             <table>
                 <tr>
-                    <th>Title</th>
-                    <th>Genre</th>
+                    <th><a href="" ng-click="sortBy('title'); reverseOrder();">Title</a></th>
+                    <th><a href="" ng-click="sortBy('title'); reverseOrder();">Genre</a></th>
+                    <th><a href="" ng-click="sortBy('title'); reverseOrder();">Author</a></th>
+                    <th></th>
+                    <th></th>
                     <th></th>
                 </tr>
-                <tr ng-repeat="book in books">
+                <tr ng-repeat="book in books | filter : searchFilter | orderBy: sortField : reversed=isReversed track by book.id">
                     <td>{{book.title}}</td>
                     <td>{{book.genre}}</td>
-                    <td><a href="">borrow</a></td>
+                    <td>{{book.author}}</td>
+                    <td><a href="" ng-click="borrowBook(book.id)">borrow</a></td>
+                    <td><a href="" ng-click="returnBook(book.id)">return</a></td>
+                    <td><a href="" ng-click="waitBook(book.id)">wait</a></td>
                 </tr>
             </table>
+        </div>
+        <div ng-controller="myCtrl">
         </div>
     </body>    
 </html>
