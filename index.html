@@ -1,7 +1,7 @@
 <html ng-app="owlApp">
     <head>
-        <link rel="stylesheet" type="text/css" href="styles/OWL.css">
         <script src="//code.angularjs.org/1.5.5/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/OWL.css">
         <title>OWL</title>
         <meta charset="utf-8">
         <script>
@@ -10,7 +10,7 @@
                 $scope.bookName="";
                 
                 //TODO get data from sql
-                var booksUrl = '/books.json';
+                var booksUrl = 'books.json';
                 $http.get(booksUrl).success(function(data){
                     $scope.books = data;                            
                 });
