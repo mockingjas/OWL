@@ -3,22 +3,19 @@
 
     var app = angular.module('owlApp', []);
 
-    var lala = '{{ entry[1] }}';
-    app.controller('shelfController', function($scope,$http) {
+    app.controller('shelfController', function($scope, $http) {
         $scope.bookName="";
-        
-        //TODO get data from sql
-        var booksUrl = '/static/books.json';
-        $http.get(booksUrl).success(function(data){
-            $scope.books = data;                            
+
+        $http.get('/api/books/').success(function(response) {
+            $scope.books = response.books;
         });
         
         var _sortBy = function (field) {
-                $scope.sortField = field;
+            $scope.sortField = field;
         };
         
         var _reverseOrder = function () {
-                $scope.isReversed = !$scope.isReversed;
+            $scope.isReversed = !$scope.isReversed;
         };
         
         $scope.sortBy = _sortBy;
