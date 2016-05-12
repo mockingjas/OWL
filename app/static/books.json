@@ -1,0 +1,212 @@
+[
+    {
+        "id" : 1,
+        "title" : "C - A Reference Manual",
+        "genre" : "C++",
+        "author": "gladys",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 2,
+        "title" : "Exceptional C++",
+        "genre" : "C++",
+        "author": "joyce",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 3,
+        "title" : "C++ Primer",
+        "genre" : "C++ / For Request",
+        "author": "james",
+        "borrower":"gching",
+        "borrowdate":"20160512",
+        "returndate":"20160519",
+        "reason":"leisure"
+    },
+    {
+        "id" : 4,
+        "title" : "Exceptional C++",
+        "genre" : "C++",
+        "author": "joyce",
+        "borrower":"dtalplacido",
+        "borrowdate":"20160411",
+        "returndate":"20160418",
+        "reason":"none"
+    },
+    {
+        "id" : 5,
+        "title" : "Dictionary of Finance and Investment Terms",
+        "genre" : "General Reference",
+        "author": "patrick",
+        "borrower":"kbernal",
+        "borrowdate":"20160615",
+        "returndate":"20160624",
+        "reason":"project"
+    },
+    {
+        "id" : 6,
+        "title" : "Data Structures",
+        "genre" : "Software Engineering",
+        "author": "mac",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 7,
+        "title" : "Head First Design Patterns",
+        "genre" : "Software Engineering",
+        "author": "gian",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 8,
+        "title" : "SQL Cookbook",
+        "genre" : "SQL",
+        "author": "ramsay",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 9,
+        "title" : "SQL Cookbook",
+        "genre" : "SQL",
+        "author": "ramsay",
+        "borrower":"iambas",
+        "borrowdate":"20160502",
+        "returndate":"20160511",
+        "reason":""
+    },
+    {
+        "id" : 10,
+        "title" : "Exceptional C++",
+        "genre" : "C++",
+        "author": "joyce",
+        "borrower":"srances",
+        "borrowdate":"20160419",
+        "returndate":"20160427",
+        "reason":""
+    },
+    {
+        "id" : 11,
+        "title" : "Data Muning with Perl",
+        "genre" : "Perl",
+        "author": "naruto",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 12,
+        "title" : "Perl Best Practices",
+        "genre" : "Perl",
+        "author": "sasuke",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 13,
+        "title" : "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "genre" : "Software Engineering",
+        "author": "jon snow",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 14,
+        "title" : "Test Driven Development: By Example",
+        "genre" : "Software Engineering",
+        "author": "cj",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 15,
+        "title" : "Working Effectively with legacy Codes",
+        "genre" : "Software Engineering",
+        "author": "arthas",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 16,
+        "title" : "High Performance MySQL",
+        "genre" : "SQL",
+        "author": "jas",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 17,
+        "title" : "Head First Design Patterns",
+        "genre" : "Software Engineering",
+        "author": "choi",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 18,
+        "title" : "The Passionate Programmer: Creating a Remarkable Career in Software Development",
+        "genre" : "Software Engineering",
+        "author": "carlo",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 19,
+        "title" : "Pro ASP.NET MVC 3 Framework",
+        "genre" : "Web",
+        "author": "maricia",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 20,
+        "title" : "The Ruby Programming Language",
+        "genre" : "Web",
+        "author": "patrick",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    },
+    {
+        "id" : 21,
+        "title" : "Exceptional C++",
+        "genre" : "C++",
+        "author": "mia",
+        "borrower":"",
+        "borrowdate":"",
+        "returndate":"",
+        "reason":""
+    }
+]
