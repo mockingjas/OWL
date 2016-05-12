@@ -7,7 +7,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1        
     },
     {
         "id" : 2,
@@ -17,7 +18,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 3,
@@ -27,7 +29,8 @@
         "borrower":"gching",
         "borrowdate":"20160512",
         "returndate":"20160519",
-        "reason":"leisure"
+        "reason":"leisure",
+        "avail":1
     },
     {
         "id" : 4,
@@ -37,7 +40,8 @@
         "borrower":"dtalplacido",
         "borrowdate":"20160411",
         "returndate":"20160418",
-        "reason":"none"
+        "reason":"none",
+        "avail":1
     },
     {
         "id" : 5,
@@ -47,7 +51,8 @@
         "borrower":"kbernal",
         "borrowdate":"20160615",
         "returndate":"20160624",
-        "reason":"project"
+        "reason":"project",
+        "avail":0
     },
     {
         "id" : 6,
@@ -57,7 +62,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 7,
@@ -67,7 +73,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 8,
@@ -77,7 +84,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 9,
@@ -87,7 +95,8 @@
         "borrower":"iambas",
         "borrowdate":"20160502",
         "returndate":"20160511",
-        "reason":""
+        "reason":"",
+        "avail":0
     },
     {
         "id" : 10,
@@ -97,7 +106,8 @@
         "borrower":"srances",
         "borrowdate":"20160419",
         "returndate":"20160427",
-        "reason":""
+        "reason":"",
+        "avail":0
     },
     {
         "id" : 11,
@@ -107,7 +117,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 12,
@@ -117,7 +128,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 13,
@@ -127,7 +139,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 14,
@@ -137,7 +150,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 15,
@@ -147,7 +161,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 16,
@@ -157,7 +172,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 17,
@@ -167,7 +183,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 18,
@@ -177,7 +194,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 19,
@@ -187,7 +205,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 20,
@@ -197,7 +216,8 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     },
     {
         "id" : 21,
@@ -207,6 +227,7 @@
         "borrower":"",
         "borrowdate":"",
         "returndate":"",
-        "reason":""
+        "reason":"",
+        "avail":1
     }
 ]

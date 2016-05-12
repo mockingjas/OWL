@@ -3,6 +3,11 @@
         <script src="//code.angularjs.org/1.5.5/angular.min.js"></script>
         <link rel="stylesheet" type="text/css" href="styles/OWL.css">
         <title>OWL</title>
+         <div  id="header" class="blue_bg">
+            <div class="header_logo">
+                <img src="styles/OWLogo.png" alt="logo" />
+            </div>
+        </div>
         <meta charset="utf-8">
         <script>
             var owlApp = angular.module('owlApp', []);
@@ -27,21 +32,79 @@
                 $scope.isReversed = "false";
                 $scope.reverseOrder = _reverseOrder; 
                 
-                $scope.test="search";
-        
+                $scope.modalShown=false;
+                $scope.toggleModal = function() {
+                    $scope.modalShown = !$scope.modalShown;
+                };
+                
+                
+                
                 $scope.borrowBook = function(ID){
+                    $scope.busername="username";
+                    $scope.breason="reason";
+                    $scope.bookid=ID;
                     console.log(ID);
+                    $scope.isBorrow=true;
                 }
                 
                 $scope.returnBook = function(ID){
+                    $scope.busername="username";
+                    $scope.breason="";
+                    $scope.bookid=ID;
                     console.log(ID);
+                    $scope.isReturn=true;
                 }
                 
-                $scope.waitBook = function(ID){
-                    console.log(ID);
+                $scope.submitbook = function(id,username,reason,isborrow){
+                    if(isborrow){
+                        console.log(id,username,reason);
+                    }
+                    else {
+                        reason='';
+                        console.log(id,username);
+                    }
+                }
+                
+                $scope.isAvail = function(data){
+                    if (data==0) {
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
+                }
+                
+                $scope.swap = function(data){
+                    if (data==0) {
+                        return 1;
+                    }
+                        else {
+                            return 0;
+                    }
                 }
             });
-
+            
+            owlApp.directive('modalDialog', function() {
+                return {
+                    restrict: 'E',
+                    scope: {
+                        show: '='
+                    },
+                    replace: true, // Replace with the template below
+                    transclude: true, // we want to insert custom content inside the directive
+                    link: function(scope, element, attrs) {
+                        scope.dialogStyle = {};
+                        if (attrs.width)
+                            scope.dialogStyle.width = attrs.width;
+                        if (attrs.height)
+                            scope.dialogStyle.height = attrs.height;
+                        scope.hideModal = function() {
+                            scope.show = false;
+                        };
+                    },
+                    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+                };
+            });
         </script>
     </head>
     <body> 
@@ -68,14 +131,22 @@
                         <td>{{book.title}}</td>
                         <td>{{book.genre}}</td>
                         <td>{{book.author}}</td>
-                        <td><a href="" ng-click="borrowBook(book.id)">borrow</a></td>
-                        <td><a href="" ng-click="returnBook(book.id)">return</a></td>
-                        <td><a href="" ng-click="waitBook(book.id)">wait</a></td>
+                        <td>{{book.avail}}</td>
+                        <td><button ng-click="borrowBook(book.id);toggleModal();" ng-disabled="isAvail(swap(book.avail))">borrow</button></td>
+                        <td><button ng-click="returnBook(book.id);toggleModal();" ng-disabled="isAvail(book.avail)">return</button></td>
                     </tr>
                 </thead>
             </table>
-        </div>
-        <div ng-controller="myCtrl">
+            <div>
+                <!--<button ng-click='toggleModal()'>Open Modal Dialog</button>-->
+                <modal-dialog show='modalShown' width='400px' height='60%'>
+                    <label ng-model="bookid">{{bookid}}</label><br/>
+                    <input type="text" ng-model="busername" placeholder="username"><br/>
+                    <input type="text" ng-model="breason" placeholder="reason" ng-hide="isReturn"><br/>
+                    <label ng-model="aa" ng-hide="isBorrow">Are you sure you want to return book?</label><br/>
+                    <button type="submit" ng-click="submitbook(bookid,busername,breason,isBorrow)">Submit</button>
+                </modal-dialog>
+            </div>
         </div>
     </body>    
 </html>
