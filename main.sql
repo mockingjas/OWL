@@ -1,6 +1,6 @@
 /*lib system main*/
 
-/* CREATE DATABASE owl_sys; */
+CREATE DATABASE owl_sys;
 
 use owl_sys;
 
@@ -31,3 +31,4 @@ CREATE TABLE borrow(
 	FOREIGN KEY (bookId) REFERENCES book(bookId),
 	FOREIGN KEY (username) REFERENCES user(username)
 );
+
