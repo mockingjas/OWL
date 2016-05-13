@@ -1,23 +1,23 @@
 body{
-    background-image: url(background.jpg);
+    background-image: url(app/static/styles/background.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .blue_bg{
-    #background-color: #B9CDE5;
+    background-color: #B9CDE5;
 }
 
 .header_logo{
     text-align: center;
     padding-left: 4px;
     padding-right: 4px;
-    #background-color: #e8edff;
+    background-color: #e8edff;
 
 }
 
 .searchBarDiv{
-    color: azure;
+    color: #039;
     font-size: 18px;
     margin: auto;
     position: relative;
@@ -60,11 +60,11 @@ body{
 	border-bottom: 1px solid #fff;
 	color: #669;
 	border-top: 1px solid #fff;
-	background: #e8edff url('gradback.png') repeat-x;
+	background: #e8edff url('app/static/styles/gradback.png') repeat-x;
 }
 #tableStyle tbody{
-	background: #d0dafd url('gradhover.png') repeat-x;
-    overflow: auto;
+	background: #d0dafd url('app/static/styles/gradhover.png') repeat-x;
+    overflow-y: scroll;
 	color: #339;
 }
 
