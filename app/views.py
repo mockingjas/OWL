@@ -13,7 +13,7 @@ def create_db():
             db.cursor().executescript(f.read())
         db.commit()
 
-@app.cli.command('initdb')
+'''@app.cli.command('initdb')'''
 def create_db_command():
     """Creates the database tables."""
     create_db()
@@ -35,7 +35,7 @@ def teardown_request(exception):
     if db is not None:
         db.close()
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     db = get_db()
     cur = g.db.execute('SELECT * FROM book ORDER BY bookId asc')

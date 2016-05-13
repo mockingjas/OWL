@@ -1,5 +1,5 @@
 body{
-    background-image: url(background.png);
+    background-color: #B9CDE5;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -12,7 +12,7 @@ body{
     text-align: center;
     padding-left: 4px;
     padding-right: 4px;
-    background-color: #e8edff;
+    background-color: #B9CDE5;
 
 }
 

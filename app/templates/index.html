@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-        <div class=searchBarDiv>
-            Search book:  <input type="text" ng-model="searchFilter" placeholder='search'>
+        <div class="searchBarDiv">
+            Search book:  <input class="textFields" type="text" ng-model="searchFilter" placeholder='search'>
         </div>
         <div ng-controller="shelfController">
-            <ul class=entries>
-                <table id=tableStyle>
+            <ul class="entries">
+                <table id="tableStyle">
                     <tr>
                         <th><a href="" ng-click="sortBy('title'); reverseOrder();">Title</a></th>
                         <th><a href="" ng-click="sortBy('genre'); reverseOrder();">Genre</a></th>
@@ -17,21 +17,18 @@
                         <td>{[book.title]}</td>
                         <td>{[book.genre]}</td>
                         <td>{[book.author]}</td>
-                        <td><button ng-click="open()">borrow</button></td>
-                        <td><button ng-click="returnBook(book.bookId,book.title);toggleModal();" ng-disabled="isAvail(book.avail)">return</button></td>
+                        <td><button ng-click="borrowBook(book.bookId, book.title); toggleModal()">borrow</button></td>
+                        <td><button ng-click="returnBook(book.bookId,book.title); toggleModal()" ng-disabled="isAvail(book.avail)">return</button></td>
                     </tr>
                 </table>
-                <!-- <div ng-controller="modalController"> -->
-                    <!--<button ng-click='toggleModal()'>Open Modal Dialog</button>-->
-                    <!-- <modal-dialog show='modalShown' width='400px' height='60%'>
-                        <h1 ng-model="bookTitle">{[bookTitle]}</h1><br/>
-                        <input type="text" ng-model="busername" placeholder="username"><br/>
-                        <input type="text" ng-model="breason" placeholder="reason" ng-hide="isReturn"><br/>
-                        <label ng-model="aa" ng-hide="isBorrow">Are you sure you want to return book?</label><br/>
-                        <button type="submit" ng-click="borrowBook(bookId,busername,breason,isBorrow)">Submit</button>
-                    </modal-dialog> -->
-                <!-- </div> -->
+                <modal-dialog show="modalShown" method="post" ng-submit="postData()">
+                    <h1 ng-model="bookTitle">{[bookTitle]}</h1><br/>
+                    <input class="textFields" type="text" ng-model="busername" placeholder="username"><br/>
+                    <input class="textFields" type="text" ng-model="breason" placeholder="reason" ng-hide="isReturn"><br/>
+                    <label ng-model="aa" ng-hide="isBorrow">Are you sure you want to return book?</label><br/>
+                    <button type="submit" ng-click="hideModal()">Submit</button>                    
+<!--                    <button type="submit" ng-click="postData(busername, breason, isBorrow)">Submit</button>-->
+                </modal-dialog>
             </ul>
         </div>
-
 {% endblock %}
