@@ -5,14 +5,14 @@ body{
 }
 
 .blue_bg{
-    #background-color: #B9CDE5;
+    background-color: #B9CDE5;
 }
 
 .header_logo{
     text-align: center;
     padding-left: 4px;
     padding-right: 4px;
-    #background-color: #e8edff;
+    background-color: #e8edff;
 
 }
 
