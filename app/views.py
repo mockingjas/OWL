@@ -41,3 +41,7 @@ def index():
     cur = g.db.execute('SELECT * FROM book ORDER BY bookId asc')
     books = cur.fetchall()
     return render_template('index.html', books=books)
+
+# @app.route('/modal')
+# def modal():
+#   return render_template('modal.html')

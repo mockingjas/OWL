@@ -12,17 +12,26 @@
                         <th><a href="" ng-click="sortBy('author'); reverseOrder();">Author</a></th>
                         <th></th>
                         <th></th>
-                        <th></th>
                     </tr>
                     <tr ng-repeat="book in books | filter : searchFilter | orderBy: sortField : reversed=isReversed track by book.bookId">
                         <td>{[book.title]}</td>
                         <td>{[book.genre]}</td>
                         <td>{[book.author]}</td>
-                        <td><a href="" ng-click="borrowBook(book.id)">borrow</a></td>
-                        <td><a href="" ng-click="returnBook(book.id)">return</a></td>
-                        <td><a href="" ng-click="waitBook(book.id)">wait</a></td>
+                        <td><button ng-click="open()">borrow</button></td>
+                        <td><button ng-click="returnBook(book.bookId,book.title);toggleModal();" ng-disabled="isAvail(book.avail)">return</button></td>
                     </tr>
                 </table>
+                <!-- <div ng-controller="modalController"> -->
+                    <!--<button ng-click='toggleModal()'>Open Modal Dialog</button>-->
+                    <!-- <modal-dialog show='modalShown' width='400px' height='60%'>
+                        <h1 ng-model="bookTitle">{[bookTitle]}</h1><br/>
+                        <input type="text" ng-model="busername" placeholder="username"><br/>
+                        <input type="text" ng-model="breason" placeholder="reason" ng-hide="isReturn"><br/>
+                        <label ng-model="aa" ng-hide="isBorrow">Are you sure you want to return book?</label><br/>
+                        <button type="submit" ng-click="borrowBook(bookId,busername,breason,isBorrow)">Submit</button>
+                    </modal-dialog> -->
+                <!-- </div> -->
             </ul>
         </div>
+
 {% endblock %}

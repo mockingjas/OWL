@@ -1,5 +1,5 @@
 body{
-    background-image: url(app/static/styles/background.png);
+    background-image: url(background.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -60,10 +60,10 @@ body{
 	border-bottom: 1px solid #fff;
 	color: #669;
 	border-top: 1px solid #fff;
-	background: #e8edff url('app/static/styles/gradback.png') repeat-x;
+	background: #e8edff url('gradback.png') repeat-x;
 }
 #tableStyle tbody{
-	background: #d0dafd url('app/static/styles/gradhover.png') repeat-x;
+	background: #d0dafd url('gradhover.png') repeat-x;
     overflow-y: scroll;
 	color: #339;
 }
@@ -127,6 +127,38 @@ body{
 .ng-modal-dialog-content {
   padding:10px;
   text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: center;
 }
 .ng-modal-close {
   position: absolute;
